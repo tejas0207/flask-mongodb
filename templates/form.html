@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #fdf9ef;
+        padding-bottom: 30px;
+        
+    }
+    .box{
+        margin-top: 45px;
+        position: absolute;
+        top: 50%;
+        left: 63%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        background: #fff;
+        padding: 40px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+    .box2{
+        margin-top: 45px;
+        position: absolute;
+        top: 50%;
+        left: 34.5%;
+        height: 104%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        background: #fff;
+        
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+        
+    }
+    
+
+    .box h2{
+        margin: 0 0 40px;
+        padding: 0;
+        color: skyblue;
+        
+    }
+    .box input{
+        padding: 10px 0;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #999;
+    }
+    .box input[type="submit"]{
+        border-bottom: none;
+        cursor: pointer;
+        background: skyblue;
+        color: #fff;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    .box form div{
+        position: relative;
+    }
+    .box form div label{
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        pointer-events: none;
+        color: #999;
+        transition: .5s;
+    }
+    .box input:focus ~ label,
+    .box input:valid ~ label 
+    {
+        top: -12px;
+        left: 0;
+        color: skyblue;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .box input:focus,
+    .box input:valid
+    {
+        border-bottom: 2px solid skyblue;
+    }
+    #head{
+        text-align: center;
+        font-size: 50px;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #h2{
+        padding: 10px;
+        line-height: 30px;
+        color: #999;
+    }
+    h4{
+        text-align: right;
+        padding: 15px;
+        color: #4d4d4d;
+    }
+</style>
+<body>
+    <div class="box2">
+        <img src="static/img.jpg" alt="" id="image" width="100%" height="300px"  >
+
+        <h2 id="head">COVID HELP</h2>
+        <h3 id="h2">Just fill out this form and we share you the available and verified resources within few hours </h3>
+        <h4> - IIEC COMMUNITY</h4>
+        
+    </div>
+    <div class="box">
+        <h2>Enter Details</h2>
+        <form action="/result" method="POST">
+           <div>
+               <input type="text" name="z1" required>
+               <label for="">Patient Name</label>
+           </div>
+           <div>
+            <input type="number" name="z2" required>
+            <label for="">Patient Age</label>
+        </div>
+        <div>
+            <input type="text" name="z3" required>
+            <label for="">Area / Location</label>
+        </div>
+        <div>
+            <input type="number" name="z4" required>
+            <label for="">SPO2 Level</label>
+        </div>
+        <div>
+            <input type="text" name="z5" required>
+            <label for="">Is patient on oxygen cylinder? Yes / No</label>
+        </div>
+        <div>
+            <input type="text" name="z6"  required>
+            <label for="">COVID-19 Result (+ve/-ve/Awaiting)</label>
+        </div>
+        <div>
+            <input type="number" name="z7"  required>
+            <label for="">Attender's Mobile No.</label>
+        </div>
+        <div>
+            <input type="text" name="z8" required>
+            <label for="">Blood Group</label>
+
+        </div>
+        <div>
+            <input type="text" name="z9" required>
+            <label for="">Requirements</label>
+
+        </div> 
+        <input type="submit" value="submit">
+        </form>
+    </div>
+    
+</body>
+</html>
